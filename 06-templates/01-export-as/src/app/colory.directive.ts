@@ -2,7 +2,7 @@ import { Directive, HostBinding } from '@angular/core';
 
 @Directive({
   selector: '[colory]',
-  exportAs: 'colory'
+  exportAs: 'colory',
 })
 export class ColoryDirective {
 

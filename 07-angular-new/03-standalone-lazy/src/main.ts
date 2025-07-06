@@ -14,5 +14,7 @@ bootstrapApplication(AppComponent, {
         loadComponent: () => import('./app/login/login.component').then(m => m.LoginComponent),
       }
     ]),
+    // provideHttpClient(withInterceptors([baseUrlInterceptor])),
+    // ...externalProviders,
   ],
 });

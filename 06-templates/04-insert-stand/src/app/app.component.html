@@ -6,9 +6,13 @@
   <button (click)="onClickClear()">Clear</button>
 </div>
 
-<div #viewContainer></div>
+<ng-container #viewContainer></ng-container>
 
-<ng-template #declaratedTemplateRef>
+<ng-container *ngTemplateOutlet="declaratedTemplateRef; context: {currentIndex: 221, $implicit: 'Template egor'}"></ng-container>
+<ng-container *ngComponentOutlet="component$ | async; injector: injector"></ng-container>
+
+<ng-template #declaratedTemplateRef let-index="currentIndex" let-user>
+  {{index}}: {{user}}
   <h3>Its template</h3>
   <app-declarated></app-declarated>
 </ng-template>

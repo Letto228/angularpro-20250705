@@ -5,6 +5,11 @@ export const pagesRoutes: Route[] = [
     {
         path: 'admin',
         component: AdminComponent,
+        providers: [
+            {
+                
+            }
+        ]
     },
     {
         path: 'home',

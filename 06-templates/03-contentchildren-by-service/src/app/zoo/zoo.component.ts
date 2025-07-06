@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ContentChildren, QueryList } from '@angular/core';
+import { Animal } from '../animal';
 
 
 @Component({
@@ -7,7 +8,9 @@ import { Component } from '@angular/core';
 })
 export class ZooComponent {
 
-  // animals ?
+  // @ContentChildren('animal')
+  @ContentChildren(Animal)
+  private animals: QueryList<Animal> = new QueryList();
 
   say() {
     this.animals.forEach(animal => animal.say());
